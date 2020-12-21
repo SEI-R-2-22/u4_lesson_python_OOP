@@ -172,7 +172,7 @@ myPerson = new Person('Bob', 16)
 myPerson.greeting()
 ```
 
-To inherit from a parent you'll notice we pass the parent class as an argument to our `Student` in this example. We create a constructor for student which accepts a name,age and grade. In order to pass some of those attributes back to the parent we utilize the `super` method and invole the parents `__init__` or constructor and pass in the attributes from the student to person. The grade attribute should be only used in the Student class.
+To inherit from a parent you'll notice we pass the parent class as an argument to our `Student` in this example. We create a constructor for student which accepts a name,age and grade. In order to pass some of those attributes back to the parent we utilize the `super` method and invoke the parents `__init__` or constructor and pass in the attributes from the student to person. The grade attribute should be only used in the Student class.
 
 Let's see how the greetings behave:
 
