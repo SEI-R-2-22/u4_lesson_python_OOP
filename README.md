@@ -182,7 +182,7 @@ my_person.greeting()
 my_person.greet_class()
 ```
 
-You'll see two different messages printed to the terminal.
+You'll see two different messages printed to the terminal by running the `main.py`.
 
 ```
 Hello my name is Bob and I am 16 years old!
