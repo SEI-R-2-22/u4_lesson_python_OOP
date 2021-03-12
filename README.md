@@ -1,5 +1,7 @@
 # Python Classes and Object Oriented Programming
 
+![](https://i.ytimg.com/vi/9DoFs5rjWYE/maxresdefault.jpg)
+
 ## Objectives
 
 - Learn how to create classes in python.
