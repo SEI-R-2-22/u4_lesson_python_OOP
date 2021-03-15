@@ -2,12 +2,19 @@
 
 ![](https://i.ytimg.com/vi/9DoFs5rjWYE/maxresdefault.jpg)
 
+## Overview
+In this lesson we'll learn about how to implement Object Oriented Programming with classes and inheritance in Python.
+
 ## Objectives
 
 - Learn how to create classes in python.
 - Learn how to re use class objects.
 - Learn how to inherit from parent classes.
 
+## Getting Started
+- `Fork` and `clone` this repository
+
+___
 ## What is Object Oriented Programming?
 
 From [Educative.io](https://www.educative.io/blog/object-oriented-programming):
@@ -49,7 +56,7 @@ class Person {
 }
 ```
 
-You'll notice we're passing in an extra paremeter called `self`. `Self` is used to reference a specific `instance` of a class when we create a new `Person`. It keeps a reference to which `name` belongs to which `instance`.
+You'll notice we're passing in an extra paremeter called `self`. `self` is used to reference a specific `instance` of a class when we create a new `Person`. It keeps a reference to which `name` belongs to which `instance`.
 
 ### Creating An Instance
 
@@ -91,7 +98,7 @@ class Person:
         self.name = name
         self.age = age
 
-   def greeting(self):
+    def greeting(self):
         print('Hello my name is {name} and I am {age} years old!'.format(
             name=self.name, age=self.age))
 
@@ -121,29 +128,10 @@ You should see `Hello my name is Bob and I am 16 years old!` printed to the term
 
 Class methods are unique to each `instance` of a class. `Instance` is just a fancy word for copy!
 
+___
 ## Inheritance
 
-Inheritance is a prgramming pattern to define a parent-child relationship. A child can inherit a parent's methods and attributes.
-
-```py
-class Person:
-    def __init__(self, name, age):
-        self.name = name
-        self.age = age
-
-    def greeting(self):
-        print('Hello my name is {name} and I am {age} years old!'.format(
-            name=self.name, age=self.age))
-
-class Student(Person):
-    def __init__(self, name, age, grade):
-        super().__init__(name, age)
-        self.grade = grade
-
-    def greet_class(self):
-        print('Hi my name is {name} and I am in grade {grade}'.format(
-            name=self.name, grade=self.grade))
-```
+Inheritance is a programming pattern to define a parent-child relationship. A child can inherit a parent's methods and attributes.
 
 Here's a javascript example:
 
@@ -174,6 +162,28 @@ myPerson = new Person('Bob', 16)
 myPerson.greeting()
 ```
 
+Now we'll take a look at how classes are inherited in Python:
+```py
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def greeting(self):
+        print('Hello my name is {name} and I am {age} years old!'.format(
+            name=self.name, age=self.age))
+
+class Student(Person):
+    def __init__(self, name, age, grade):
+        super().__init__(name, age)
+        self.grade = grade
+
+    def greet_class(self):
+        print('Hi my name is {name} and I am in grade {grade}'.format(
+            name=self.name, grade=self.grade))
+```
+
+
 To inherit from a parent you'll notice we pass the parent class as an argument to our `Student` in this example. We create a constructor for student which accepts a name,age and grade. In order to pass some of those attributes back to the parent we utilize the `super` method and invoke the parents `__init__` or constructor and pass in the attributes from the student to person. The grade attribute should be only used in the Student class.
 
 Let's see how the greetings behave:
@@ -190,10 +200,30 @@ You'll see two different messages printed to the terminal by running the `main.p
 Hello my name is Bob and I am 16 years old!
 Hi my name is Bob and I am in grade 6
 ```
-
+___
 ## You Do
 
 Follow the instructions in `main.py` to complete this exercise.
+
+## Recap
+In this lesson, we learned about how Python achieves Object Oriented Programming with classes and inheritance. A few important concepts to note:
+- Rather than using a `constructor()` method like a JavaScript class would, Python classes use the `def __init__(self,...):` method after a class is declared. Example:
+    
+    ```python
+    class Snake:
+      def __init__(self, species, size):
+        self.species = species
+        self.size = size
+    ```
+- Python class methods require the `def` keyword when declared and have the same indentation as the class's initial `__init__(self,...)` method
+- Python classes can be inherited by passing an existing class into its declaration and with the `super().__init__()` method, which is declared _within_ the initial `__init__(self,...)` method. Example:
+    
+    ```python
+    class Python(Snake):
+      def __init__(self, species, size, constriction):
+        super().__init__(species, size):
+          self.constriction = constriction
+    ```
 
 ## Resources
 
