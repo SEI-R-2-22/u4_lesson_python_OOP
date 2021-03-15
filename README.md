@@ -205,6 +205,10 @@ ___
 
 Follow the instructions in `main.py` to complete this exercise.
 
+Finish each one of the ten problems before continuing
+
+
+___
 ## Recap
 In this lesson, we learned about how Python achieves Object Oriented Programming with classes and inheritance. A few important concepts to note:
 - Rather than using a `constructor()` method like a JavaScript class would, Python classes use the `def __init__(self,...):` method after a class is declared. Example:
@@ -226,5 +230,6 @@ In this lesson, we learned about how Python achieves Object Oriented Programming
     ```
 
 ## Resources
-
 - [Why Use Objects and Object Oriented Programming](https://levelup.gitconnected.com/why-learn-objects-oriented-programming-in-python-794cdccc4caa)
+- [Python Classes](https://www.programiz.com/python-programming/class)
+- [Python Inheritance](https://www.programiz.com/python-programming/inheritance)
