@@ -189,7 +189,7 @@ To inherit from a parent you'll notice we pass the parent class as an argument t
 Let's see how the greetings behave:
 
 ```py
-my_person = Person('Bob', 16, 6)
+my_person = Student('Bob', 16, 6)
 my_person.greeting()
 my_person.greet_class()
 ```
