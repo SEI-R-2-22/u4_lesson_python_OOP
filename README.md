@@ -25,6 +25,34 @@ From [Educative.io](https://www.educative.io/blog/object-oriented-programming):
 
 > Classes can also contain functions, called methods available only to objects of that type. These functions are defined within the class and perform some action helpful to that specific type of object.
 
+
+## Object Oriented Programming
+
+Object oriented programming (OOP) isn't a language or a tool. OOP is a style of programming — what we call a **programming paradigm**.  The four pillars of object oriented programming are:
+
+<details>
+  <summary><strong>1. Encapsulation</strong></summary>
+  <p>Encapsulation is one method that we use to try to make complex systems easier to use.  Encapsulation is defined as the action of enclosing something in, or as if in, a capsule.  In programming, the capsule is an object.  This makes our code clearer and cleaner because all of the related parts are grouped together!</p>
+  <p>We also use encapsulation to hide all of the really complex parts of our code, while providing simple ways to access the essential parts from the outside only when necessary.  This means we can isolate the impact of changes in the internal, hidden parts has on the overall system.</p>
+</details>
+<details>
+  <summary><strong>2. Abstraction</strong></summary>
+  <p> Abstraction is a concept that is closely related to encapsulation.  It's also a way to remove complexity.  Think of your phone.  It's got a pretty simple user Interface: maybe it has a screen and one button (maybe not even a button!), but the internal logic board of the phone is super complicated.  As a user, we don't need to know anything about how the phone's logic board works in order to use it. This is an example of abstraction in the real world.</p>
+  <p>Both abstraction and encapsulation aim to reduce complexity in our code.  Encapsulation refers to the things we do to reduce the complexity in our implementation or how our code is actually written.   Abstraction refers to how we design or architect our code.  Thus abstraction happens when we plan and encapsulation happens when we execute the plan.</p>
+</details>
+<details>
+  <summary><strong>3. Inheritance</strong></summary>
+  <p>One of the chief problems with encapsulating all of our code into self contained objects is that there's a strong possibility that we'll have lots of duplicated code among objects of a similar type.  Inheritance helps us solve that problem.</p>
+  <p>Let's put this in terms of a real life example too.  Imagine you've got a program with different types of users.  Some users are administrators who can do lots more in our app than customers can. Even though they are different they share a lot in common.  They both have emails, usernames, passwords, profile pictures and much more.</p>
+  <p>Using inheritance we can put all of things that users have in common inside of one object called **User** and then create separate objects for an Admin and a Customer.  Both of the Admin and the Customer will **inherit** the properties and behaviors that they share in common from the User.  This helps make our code DRYer.</p>
+</details>
+<details>
+  <summary><strong>4. Polymorphism</strong></summary>
+  <p>Poly means many and morph means form, so polymorphism is many forms.  Lets imagine that you have a program with animals (it  could totally happen :smile:). All of the animals have the same method called move.  This method causes the animals to walk to a specific location on the screen.  It works great for some of our animals, but not for the fish or birds in our program.  They need a different type of implementation for moving, they need to swim or fly, not walk.  So the method move can take many forms, depending on the animal type that uses it!</p>
+  <p>Polymorphism makes our code easier to understand and work with because it's way less complicated to remember that every animal has a move method, than to remember that the method for a dog is called walk and the one for the catfish is swim, or the one for the pigeon is fly.  It's also clearer to us if each type of animal is responsible for it's own implementation of move than to have a single method called move that uses a gigantic conditional statement to determine how that one method should be applied to different types of animals.</p>
+</details>
+
+
 ## Defining Classes In Python
 
 Classes can be defined in `Python` using the `class` keyword:
